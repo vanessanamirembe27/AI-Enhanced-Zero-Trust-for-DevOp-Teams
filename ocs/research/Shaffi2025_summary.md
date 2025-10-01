@@ -4,7 +4,7 @@
 This paper explores how artificial intelligence (AI) can address the limits of traditional cloud security, which is too slow and reactive for modern, distributed systems.
 
 ## AI Applications in Security
-- Threat Detection & Anomaly Monitoring** — ML models analyze network traffic, logs, and behavior to spot suspicious activity faster and with fewer false positives.  
+- Threat Detection & Anomaly Monitoring — ML models analyze network traffic, logs, and behavior to spot suspicious activity faster and with fewer false positives.  
 - Automated Response — AI can isolate compromised workloads, revoke access, or update microsegmentation rules instantly.  
 - Predictive Analytics — Uses historical data to anticipate attacks and proactively tighten controls.  
 - Encryption Management — AI can handle key rotation, algorithm selection, and adaptive cryptography.

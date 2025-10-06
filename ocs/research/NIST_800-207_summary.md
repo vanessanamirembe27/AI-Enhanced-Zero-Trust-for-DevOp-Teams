@@ -31,3 +31,7 @@ The document provides a vendor-neutral, conceptual framework to help organizatio
 ## Relevance for This Project
 This paper provides the **core Zero Trust model** (PDP–PEP–CDM) that our project will integrate into **DevOps CI/CD pipelines**.  
 It sets the standard for what “good Zero Trust” means and is the baseline for adding **AI-driven automation** and **adaptive policy generation** in DevOps workflows.
+
+
+
+

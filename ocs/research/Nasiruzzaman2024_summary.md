@@ -22,3 +22,5 @@ It also identifies current operational challenges and forecasts the next generat
 ## Relevance for This Project
 Shows that Zero Trust is **mature but not fully automated**.  
 Highlights AI and quantum-safe security as the natural next steps — a gap this project can target by embedding AI-driven Zero Trust into DevOps CI/CD pipelines.
+
+Rename folder ocs to docs

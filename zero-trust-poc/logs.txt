@@ -1,0 +1,15 @@
+[2025-11-05 17:22:09] ALLOWED: Records Room → Front Desk
+[2025-11-05 17:22:10] ALLOWED: IT Support → Front Desk
+[2025-11-05 17:22:11] ALLOWED: Records Room → Front Desk
+[2025-11-05 17:22:13] ALLOWED: IT Support → Finance Office
+[2025-11-05 17:22:14] ALLOWED: Marketing Office → Front Desk
+[2025-11-05 17:22:15] ALLOWED: Marketing Office → Front Desk
+[2025-11-05 17:22:16] BLOCKED: Marketing Office attempted to contact Records Room (Unauthorized)
+[2025-11-10 15:53:59] ALLOWED: Finance Office → Front Desk
+[2025-11-10 15:54:00] BLOCKED: Records Room attempted to contact Marketing Office (Unauthorized)
+[2025-11-10 15:54:01] ALLOWED: Marketing Office → Front Desk
+[2025-11-10 15:54:02] ALLOWED: IT Support → Finance Office
+[2025-11-10 15:54:03] BLOCKED: Records Room attempted to contact Finance Office (Unauthorized)
+[2025-11-10 15:54:05] ALLOWED: Front Desk → Records Room
+[2025-11-10 15:54:06] ALLOWED: Front Desk → Records Room
+[2025-11-10 15:54:07] ALLOWED: Finance Office → Front Desk

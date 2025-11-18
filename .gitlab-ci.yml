@@ -1,0 +1,89 @@
+stages:
+  - lint
+  - build
+  - test
+  - zero_trust_gate
+  - build_container
+  - security_scan
+  - deploy
+
+variables:
+  IMAGE_NAME: zero-trust-poc:latest
+
+lint:
+  stage: lint
+  image: python:3.11
+  script:
+    - pip install -r requirements.txt
+    - echo "Lint placeholder"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+build:
+  stage: build
+  image: python:3.11
+  script:
+    - pip install -r requirements.txt
+    - echo "Build complete"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+test:
+  stage: test
+  image: python:3.11
+  script:
+    - pip install -r requirements.txt
+    - pytest -q
+  needs:
+    - build
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+zero_trust_security_gate:
+  stage: zero_trust_gate
+  image: python:3.11
+  script:
+    - pip install colorama
+    - cd zero-trust-poc/pipeline
+    - python zero_trust_gate.py
+  needs:
+    - test
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: always
+
+build_container:
+  stage: build_container
+  image: docker:20.10.16
+  services:
+    - docker:20.10.16-dind
+  script:
+    - cd zero-trust-poc
+    - docker build -t $IMAGE_NAME .
+  needs:
+    - zero_trust_security_gate
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+security_scan:
+  stage: security_scan
+  image: aquasec/trivy:latest
+  script:
+    - trivy image --severity HIGH,CRITICAL $IMAGE_NAME
+  needs:
+    - build_container
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Simulated deploy"
+  needs:
+    - security_scan
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: manual

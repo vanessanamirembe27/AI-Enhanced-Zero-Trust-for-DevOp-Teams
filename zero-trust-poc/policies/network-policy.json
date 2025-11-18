@@ -1,0 +1,16 @@
+{
+    "services": {
+        "Front Desk": {
+            "allowed": ["Records Room", "Finance Office"]
+        },
+        "Records Room": {
+            "allowed": ["Finance Office"]
+        },
+        "Marketing Office": {
+            "allowed": []
+        },
+        "Finance Office": {
+            "allowed": ["Front Desk"]
+        }
+    }
+}

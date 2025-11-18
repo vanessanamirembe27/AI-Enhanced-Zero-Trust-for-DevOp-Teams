@@ -1,0 +1,12 @@
+2025-11-10 16:15:52,Front Desk,Records Room,allowed,explicit policy rule
+2025-11-10 16:15:52,Front Desk,Marketing Office,blocked,not in allowed list
+2025-11-10 16:15:52,Front Desk,Finance Office,allowed,explicit policy rule
+2025-11-10 16:15:52,Records Room,Front Desk,blocked,not in allowed list
+2025-11-10 16:15:52,Records Room,Marketing Office,blocked,not in allowed list
+2025-11-10 16:15:52,Records Room,Finance Office,allowed,explicit policy rule
+2025-11-10 16:15:52,Marketing Office,Front Desk,blocked,not in allowed list
+2025-11-10 16:15:52,Marketing Office,Records Room,blocked,not in allowed list
+2025-11-10 16:15:52,Marketing Office,Finance Office,blocked,not in allowed list
+2025-11-10 16:15:52,Finance Office,Front Desk,allowed,explicit policy rule
+2025-11-10 16:15:52,Finance Office,Records Room,blocked,not in allowed list
+2025-11-10 16:15:52,Finance Office,Marketing Office,blocked,not in allowed list

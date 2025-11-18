@@ -10,3 +10,39 @@
 2025-11-10 16:15:52,Finance Office,Front Desk,allowed,explicit policy rule
 2025-11-10 16:15:52,Finance Office,Records Room,blocked,not in allowed list
 2025-11-10 16:15:52,Finance Office,Marketing Office,blocked,not in allowed list
+2025-11-10 17:13:11,Front Desk,Records Room,allowed,explicit policy rule
+2025-11-10 17:13:11,Front Desk,Marketing Office,blocked,not in allowed list
+2025-11-10 17:13:11,Front Desk,Finance Office,allowed,explicit policy rule
+2025-11-10 17:13:11,Records Room,Front Desk,blocked,not in allowed list
+2025-11-10 17:13:11,Records Room,Marketing Office,blocked,not in allowed list
+2025-11-10 17:13:11,Records Room,Finance Office,allowed,explicit policy rule
+2025-11-10 17:13:11,Marketing Office,Front Desk,blocked,not in allowed list
+2025-11-10 17:13:11,Marketing Office,Records Room,blocked,not in allowed list
+2025-11-10 17:13:11,Marketing Office,Finance Office,blocked,not in allowed list
+2025-11-10 17:13:11,Finance Office,Front Desk,allowed,explicit policy rule
+2025-11-10 17:13:11,Finance Office,Records Room,blocked,not in allowed list
+2025-11-10 17:13:11,Finance Office,Marketing Office,blocked,not in allowed list
+2025-11-10 17:13:46,Front Desk,Records Room,allowed,explicit policy rule
+2025-11-10 17:13:46,Front Desk,Marketing Office,blocked,not in allowed list
+2025-11-10 17:13:46,Front Desk,Finance Office,allowed,explicit policy rule
+2025-11-10 17:13:46,Records Room,Front Desk,blocked,not in allowed list
+2025-11-10 17:13:46,Records Room,Marketing Office,blocked,not in allowed list
+2025-11-10 17:13:46,Records Room,Finance Office,allowed,explicit policy rule
+2025-11-10 17:13:46,Marketing Office,Front Desk,blocked,not in allowed list
+2025-11-10 17:13:46,Marketing Office,Records Room,blocked,not in allowed list
+2025-11-10 17:13:46,Marketing Office,Finance Office,blocked,not in allowed list
+2025-11-10 17:13:46,Finance Office,Front Desk,allowed,explicit policy rule
+2025-11-10 17:13:46,Finance Office,Records Room,blocked,not in allowed list
+2025-11-10 17:13:46,Finance Office,Marketing Office,blocked,not in allowed list
+2025-11-10 17:24:57,Front Desk,Records Room,allowed,explicit policy rule
+2025-11-10 17:24:57,Front Desk,Marketing Office,blocked,not in allowed list
+2025-11-10 17:24:57,Front Desk,Finance Office,allowed,explicit policy rule
+2025-11-10 17:24:57,Records Room,Front Desk,blocked,not in allowed list
+2025-11-10 17:24:57,Records Room,Marketing Office,blocked,not in allowed list
+2025-11-10 17:24:57,Records Room,Finance Office,allowed,explicit policy rule
+2025-11-10 17:24:57,Marketing Office,Front Desk,blocked,not in allowed list
+2025-11-10 17:24:57,Marketing Office,Records Room,blocked,not in allowed list
+2025-11-10 17:24:57,Marketing Office,Finance Office,blocked,not in allowed list
+2025-11-10 17:24:57,Finance Office,Front Desk,allowed,explicit policy rule
+2025-11-10 17:24:57,Finance Office,Records Room,blocked,not in allowed list
+2025-11-10 17:24:57,Finance Office,Marketing Office,blocked,not in allowed list

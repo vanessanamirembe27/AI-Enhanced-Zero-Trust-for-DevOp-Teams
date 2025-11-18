@@ -71,7 +71,9 @@ build_container:
 
 security_scan:
   stage: security_scan
-  image: aquasec/trivy:latest
+  image:
+   name:  aquasec/trivy:latest
+  entrypoint: [""]
   script:
     - echo "Running filesystem vulnerability scan..."
     - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress .

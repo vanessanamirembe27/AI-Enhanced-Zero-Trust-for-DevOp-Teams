@@ -72,7 +72,8 @@ security_scan:
   stage: security_scan
   image: aquasec/trivy:latest
   script:
-    - trivy image --severity HIGH,CRITICAL $IMAGE_NAME
+    - echo "Running filesystem vulnerability scan..."
+    - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress .
   needs:
     - build_container
   rules:

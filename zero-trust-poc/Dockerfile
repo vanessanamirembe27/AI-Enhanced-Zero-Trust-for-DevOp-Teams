@@ -1,5 +1,5 @@
 FROM python:3.11-slim
-WKDIR /app
+WORKDIR /app
 #Copy pipeline code
 COPY pipeline/ /app/pipeline/
 COPY pipeline/ /app/policies/

@@ -71,9 +71,10 @@ build_container:
 
 security_scan:
   stage: security_scan
-  image:
-   name:  aquasec/trivy:latest
-  entrypoint: [""]
+  image: aquasec/trivy:latest
+  before_script:
+    - echo "Fixing entrypoint so Trivy runs normally"
+    - export TRIVY_NON_SSL=true
   script:
     - echo "Running filesystem vulnerability scan..."
     - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress .

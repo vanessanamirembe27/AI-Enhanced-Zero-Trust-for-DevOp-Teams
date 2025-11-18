@@ -4,6 +4,6 @@ WORKDIR /app
 COPY pipeline/ /app/pipeline/
 COPY pipeline/ /app/policies/
 #Install dependencies
-RUN pip install pyyaml coloroma
+RUN pip install pyyaml colorama
 
 CMD ["python", "pipeline/cicd_pipeline.py"]

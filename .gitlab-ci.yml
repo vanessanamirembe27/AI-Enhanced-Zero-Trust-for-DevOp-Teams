@@ -76,7 +76,16 @@ security_scan:
     entrypoint: [""]
   script:
     - echo "Running filesystem vulnerability scan..."
-    - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress .
+    # JSON report
+    - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress --format json --output trivy-report.json .
+    # HTML report
+    - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress --format template --template "@/contrib/html.tpl" --output trivy-report.html .
+  artifacts:
+    when: always
+    paths:
+      - trivy-report.json
+      - trivy-report.html
+    expire_in: 1 week
   needs:
     - build_container
   rules:

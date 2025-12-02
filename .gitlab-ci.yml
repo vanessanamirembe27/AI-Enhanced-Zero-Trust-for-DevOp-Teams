@@ -74,12 +74,16 @@ security_scan:
   image:
     name: aquasec/trivy:latest
     entrypoint: [""]
+  variables:
+    GIT_STRATEGY: clone   
   script:
+    - echo "DEBUG: listing workspace"
+    - ls -R .
     - echo "Running filesystem vulnerability scan..."
     # JSON report
     - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress --format json --output trivy-report.json .
     # HTML report
-    - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress --format template --template "@zero-trust-poc/trivy-templates/report.tpl" --output trivy-report.html .
+    - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress --format template --template "zero-trust-poc/trivy-templates/report.tpl" --output trivy-report.html .
   artifacts:
     when: always
     paths:
